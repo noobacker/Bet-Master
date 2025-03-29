@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { IPL_TEAMS } from '../constants/teams';
 import { FaGithub, FaChevronDown, FaChevronUp } from 'react-icons/fa';
