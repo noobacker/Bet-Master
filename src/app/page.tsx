@@ -1,4 +1,5 @@
-import Image from "next/image";
+'use client';
+
 import BetCalculator from '../components/BetCalculator';
 
 export default function Home() {

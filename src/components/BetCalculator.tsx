@@ -245,61 +245,7 @@ export default function BetCalculator() {
   };
 
   const handleSettingsSave = () => {
-    // First update the settings
     setSettings(tempSettings);
-    
-    // Then recalculate all values with new settings
-    const newMatches = matches.map(match => {
-      const team1Odds = parseFloat(match.team1Bet.odds);
-      const team2Odds = parseFloat(match.team2Bet.odds);
-      
-      // If using budget, calculate new amounts
-      if (tempSettings.maxBudget > 0) {
-        const team1BudgetAmount = calculateBudgetBasedAmount(team1Odds);
-        const team2BudgetAmount = calculateBudgetBasedAmount(team2Odds);
-        
-        return {
-          ...match,
-          team1Bet: {
-            ...match.team1Bet,
-            recommendedAmount: team1BudgetAmount,
-            betAmount: team1BudgetAmount.toString(),
-            estimatedPayout: calculatePayout(team1BudgetAmount, team1Odds),
-          },
-          team2Bet: {
-            ...match.team2Bet,
-            recommendedAmount: team2BudgetAmount,
-            betAmount: team2BudgetAmount.toString(),
-            estimatedPayout: calculatePayout(team2BudgetAmount, team2Odds),
-          },
-        };
-      }
-      
-      // Calculate new recommended amounts for non-budget case
-      const team1Recommended = team1Odds ? calculateRecommendedAmount(team1Odds, match.team1Bet.estimatedPayout + match.team2Bet.estimatedPayout) : 0;
-      const team2Recommended = team2Odds ? calculateRecommendedAmount(team2Odds, match.team1Bet.estimatedPayout + match.team2Bet.estimatedPayout) : 0;
-      
-      return {
-        ...match,
-        team1Bet: {
-          ...match.team1Bet,
-          recommendedAmount: team1Recommended,
-        },
-        team2Bet: {
-          ...match.team2Bet,
-          recommendedAmount: team2Recommended,
-        },
-      };
-    });
-    
-    // Update matches state
-    setMatches(newMatches);
-  };
-
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      handleSettingsSave();
-    }
   };
 
   return (
@@ -425,7 +371,7 @@ export default function BetCalculator() {
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#3B82F6]/10 flex items-center justify-center text-[#3B82F6] font-semibold">5</div>
                     <div>
                       <h3 className="text-white font-medium mb-1">Add More Matches</h3>
-                      <p>Use the "Add Another Match" button to calculate multiple matches simultaneously.</p>
+                      <p>Use the &quot;Add Another Match&quot; button to calculate multiple matches simultaneously.</p>
                     </div>
                   </div>
                 </div>
