@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bet Master - IPL Betting Calculator
+
+A professional betting calculator designed specifically for IPL matches, helping users optimize their betting strategies and calculate potential returns.
+
+## Features
+
+- **Two Calculation Modes**:
+  - Target Payout Mode: Calculate bet amounts based on desired payout
+  - Maximum Budget Mode: Optimize bets within a specified budget
+
+- **Smart Calculations**:
+  - Automatic recommended bet amounts
+  - Equal payout distribution
+  - Budget-based optimization
+  - Rounding to nearest 5 units
+
+- **Comprehensive Analysis**:
+  - Total investment tracking
+  - Estimated payouts
+  - Profit/loss scenarios
+  - Team-specific loss scenarios
+
+- **User-Friendly Interface**:
+  - Modern, dark-themed design
+  - Responsive layout for all devices
+  - Step-by-step guidance
+  - Custom team support
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/noobacker/betwise-pro.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd betwise-pro
+```
+
+3. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+4. Start the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Set Calculator Settings**:
+   - Choose between Target Payout or Maximum Budget mode
+   - Enter your desired values
 
-## Learn More
+2. **Select Teams**:
+   - Choose from the IPL team list
+   - Or enter custom team names
 
-To learn more about Next.js, take a look at the following resources:
+3. **Enter Betting Details**:
+   - Input odds for each team
+   - Enter bet amounts or use recommended amounts
+   - View estimated payouts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Review Analysis**:
+   - Check total investment
+   - View potential returns
+   - Analyze profit/loss scenarios
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. **Add More Matches**:
+   - Use the "Add Another Match" button
+   - Calculate multiple matches simultaneously
 
-## Deploy on Vercel
+## Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Next.js 14
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+- **noobacker** - [GitHub](https://github.com/noobacker)
+
+## Acknowledgments
+
+- IPL Teams data
+- Modern UI components and animations
+- Betting calculation algorithms
